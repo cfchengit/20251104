@@ -87,3 +87,12 @@ canvas {
   cursor: pointer;
   font-size: 18px;
 }
+
+
+
+.chiron-goround-tc-font1 {
+  font-family: "Chiron GoRound TC", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 40;
+  font-style: normal;
+}
