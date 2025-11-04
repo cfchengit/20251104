@@ -1,17 +1,11 @@
 let colors = ['#f71735', '#067bc2', '#FFC247', '#3BD89F', '#81cfe5', '#f654a9'];
 let shapes = [];
 let objs = [];
-let myFont;
 let ctx;
 let sideMenu;
 let titleY;
 let titleAnimationStartFrame = 0;
 const titleAnimationDuration = 120; // 動畫持續 120 幀 (約 2 秒)
-
-
-function preload() {
-	myFont = loadFont('fonts/ChironGoRoundTC-VariableFont_wght.ttf');
-}
 
 function setup() {
 	// createCanvas(800, 600); //設定畫布大小
@@ -42,8 +36,8 @@ function draw() {
 	// --- 標題動畫 ---
 	let progress = (frameCount - titleAnimationStartFrame) / titleAnimationDuration;
 	progress = constrain(progress, 0, 1); // 確保進度在 0 到 1 之間
-	let boxW = width / 3;
-	let boxH = height / 3;
+	let boxW = width / 9;
+	let boxH = height / 9;
 
 	const startY = height + 100; // 從底部外開始
 	const endY = height / 2;
@@ -56,7 +50,7 @@ function draw() {
 	noStroke();
 	rect(width / 2, height / 2, boxW, boxH);
 	// 在畫布中間加上標題文字
-	textFont(myFont);
+	textFont('Chiron GoRound TC');
 	textSize(min(width, height) / 10);
 	fill('#FFC247'); // 鮮豔的黃色
 	noStroke();
